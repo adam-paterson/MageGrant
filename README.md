@@ -1,4 +1,0 @@
-MageGrant
-=========
-
-Magento Development Box

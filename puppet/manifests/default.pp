@@ -1,4 +1,4 @@
-exec { 'apt_update':
-  command => 'apt-get update',
-  path    => '/usr/bin'
-}
+include stdlib
+include nginx
+include mysql
+include php

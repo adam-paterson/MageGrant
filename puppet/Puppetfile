@@ -1,0 +1,6 @@
+forge "http://forge.puppetlabs.com"
+
+mod 'stdlib', :git => "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+mod 'nginx', :git => "https://github.com/jfryman/puppet-nginx.git"
+mod 'php', :git => "https://github.com/saz/puppet-php.git"
+mod 'mysql', :git => "https://github.com/puppetlabs/puppetlabs-mysql.git"
