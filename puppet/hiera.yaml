@@ -1,0 +1,7 @@
+---
+:backends: json
+:json:
+    :datadir: '/vagrant'
+:hierarchy:
+    - config
+:logger: console

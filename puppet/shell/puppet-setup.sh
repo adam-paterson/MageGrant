@@ -59,3 +59,10 @@ if [[ ! -f /.puppet-setup/librarian-puppet-installed ]]; then
 	
 	touch /.puppet-setup/librarian-puppet-installed
 fi
+
+if [[ ! -f /.puppet-setup/templates-copied ]]; then
+	echo "Copying puppet templates"
+	cp -R "/vagrant/puppet/files" "${PUPPET_DIR}/templates"
+	
+	touch /.puppet-setup/templates-copied
+fi

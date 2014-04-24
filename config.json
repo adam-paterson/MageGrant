@@ -1,0 +1,8 @@
+{
+	"vhost": {
+		"servername": "testing.dev",
+		"developer": {
+			"magento": true
+		}
+	}
+}

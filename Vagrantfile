@@ -20,14 +20,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
   
-  # Before provisioning the vm using puppet install librarian-puppet for easy package management
   config.vm.provision "shell" do |s|
     s.path = "puppet/shell/initial-setup.sh"
   end
   
+  # Before provisioning the vm using puppet install librarian-puppet for easy package management
   config.vm.provision :shell, :path => "puppet/shell/puppet-setup.sh"
   
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "puppet/manifests"
+    puppet.options = "--verbose"
+    puppet.options = "--hiera_config /vagrant/puppet/hiera.yaml"
   end
 end
