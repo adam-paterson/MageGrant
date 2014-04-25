@@ -4,5 +4,26 @@
 		"developer": {
 			"magento": true
 		}
+	},
+	"mysql": {
+		"database": {
+			"grant": "ALL",
+			"name": "test",
+			"host": "localhost",
+			"user": "adam",
+			"password": "110990ap",
+			"sqlFile": ""
+		}
+	},
+	"php": {
+		"version": "55",
+		"composer": true,
+		"modules": {
+			"cli": true,
+			"mcrypt": true
+		},
+		"ini": {
+			"display_errors": true
+		}
 	}
 }

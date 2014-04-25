@@ -1,0 +1,19 @@
+commands:
+  N98\Magento\Command\Installer\InstallCommand:
+    magento-packages:
+      - name: my-magento-git-repository
+        version: 1.x.x.x
+        source:
+          url: git://myserver/myrepo.git
+          type: git
+          reference: 1.x.x.x
+        extra:
+          sample-data: sample-data-1.6.1.0
+
+      - name: my-zipped-magento
+        version: 1.7.0.0
+        dist:
+          url: http://www.myserver.example.com/magento-1.7.0.0.tar.gz
+          type: tar
+        extra:
+          sample-data: sample-data-1.6.1.0

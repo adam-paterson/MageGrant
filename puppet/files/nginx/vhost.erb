@@ -1,14 +1,14 @@
 server {
     listen 80;
-    server_name <%= @servername %>;
+    server_name <%= @vhostValues['servername'] %>;
     rewrite / $scheme://www.$host$request_uri permanent; ## Forcibly prepend a www
 }
  
 server {
     listen 80 default;
 ## SSL directives might go here
-    server_name www.<%= @servername %> *.<%= @servername %>; ## Domain is here twice so server_name_in_redirect will favour the www
-    root /var/www/vhosts/<%= @servername %>;
+    server_name www.<%= @vhostValues['servername'] %> *.<%= @vhostValues['servername'] %>; ## Domain is here twice so server_name_in_redirect will favour the www
+    root /var/www/vhosts/<%= @vhostValues['servername'] %>;
  
     location / {
         index index.html index.php; ## Allow a static html file to be shown first
